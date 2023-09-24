@@ -1,0 +1,79 @@
+/* Search results  CSS */
+.search-results .blog-post-item.type-product {
+    max-width: 800px;
+}
+.search-results .blog-post-item.type-product .blog-content:not(.blog-details-content) .post-text {
+    margin: 0 0;
+}
+.search-results .blog-post-item.type-product .blog-content .post-text p {
+    margin: 0 0;
+}
+.search-results .blog-post-item.type-product .blog-content .title {
+    margin-bottom: 15px;
+}
+.mc4wp-alert {
+    margin: 20px 0 0;
+    text-align: center;
+}
+.mc4wp-alert p {
+    margin: 0 0;
+}
+.mc4wp-success p {
+    color: green;
+}
+
+/* Elementor Custom CSS */
+.dexai-menu-not-showing {
+    padding: 25px 0;
+}
+.main-content-white .noise-bg,
+.main-content-white .main-shape,
+.main-content-two .noise-bg,
+.main-content-two .main-shape {
+    display: none !important;
+}
+.counter-wrapper .elementor-column-gap-no {
+    position: relative;
+    box-shadow: 0px 7px 4px rgba(68, 87, 107, 0.04);
+    margin-top: 6px;
+    z-index: 1;
+}
+.counter-wrapper .elementor-column-gap-no::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -6px;
+    width: calc(100% - 1px);
+    height: 100%;
+    background: linear-gradient(270.97deg, var(--tg-gradient3) -12.41%, var(--tg-gradient4) 1.99%, var(--tg-gradient5) 14.83%, var(--tg-gradient6) 32.71%, var(--tg-gradient7) 48.64%,
+            var(--tg-gradient8) 70.26%, var(--tg-gradient9) 86.95%, var(--tg-gradient10) 99.96%);
+    border-radius: 30px;
+    z-index: -1;
+}
+
+.dark-map-css iframe {
+    filter: grayscale(100%) invert(85%) contrast(100%);
+}
+
+/* Elementor Responsive */
+@media (max-width: 1800px) {
+
+}
+@media (max-width: 1199.98px) {
+
+}
+
+@media (max-width: 991.98px){
+
+}
+
+@media (max-width: 767.98px) {
+.noise-bg {
+    display: none !important;
+}
+.banner-content span.ah-words-wrapper {
+    margin: 0 auto;
+    display: block !important;
+}
+
+}
