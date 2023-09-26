@@ -2426,6 +2426,7 @@ label {
 	padding: 0 10px;
 }
 .writing-item {
+	background-color: #2e1a55;
 	position: relative;
 	padding: 0;
 	z-index: 1;
@@ -2435,7 +2436,7 @@ label {
 	border: 2px solid #6721FF; 
 	border-top-right-radius: 20px; 
 	border-top-left-radius: 20px; 
-	opacity: 0.7;
+	opacity: 0.8;
 }
 .writing-item:hover {
 	transform: translateY(-4px);
@@ -2469,8 +2470,8 @@ label {
 	background: var(--tg-gradient-color);
 	font-size: 26px;
 	color: var(--tg-white);
-	position: absolute;
-	left: 0;
+	position: relative;
+	left: 11px;
 	top: 11px;
 	z-index: 1;
 	transition: .3s linear;
@@ -2495,12 +2496,23 @@ label {
 	z-index: -1;
 }
 .writing-content .title {
+	position: relative;
+	left: 30px;
+	top: 30px;
 	font-size: 20px;
 	margin-bottom: 10px;
 }
+.writing-content img {
+	width: 100%;
+}
 .writing-content p {
+	position: relative;
+	top: 30px;
 	margin-bottom: 17px;
 	font-size: 15px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 30px;
 }
 .writing-content a {
 	color: var(--tg-white);
