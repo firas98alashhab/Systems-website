@@ -555,7 +555,7 @@ label {
 }
 .navbar-wrap {
 	display: flex;
-	flex-grow: 1;
+	flex-grow: 0.85;
 }
 .navbar-wrap ul {
 	display: flex;
