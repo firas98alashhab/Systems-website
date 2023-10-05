@@ -52,6 +52,28 @@ body {
 img {
     height: auto;
 }
+.main-logo img {
+    width: 225px;
+    height: auto;
+}
+@media (max-width: 992px) {
+    .main-logo img {
+        width: 175px;
+        height: auto;
+    } 
+}
+@media (max-width: 767px) {
+    .main-logo img {
+        width: 150px;
+        height: auto;
+    } 
+}
+@media (max-width: 360px) {
+    .main-logo img {
+        width: 130px;
+        height: auto;
+    } 
+}
 .latest-comments blockquote code,
 .latest-comments blockquote a,
 blockquote code {
