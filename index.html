@@ -1022,21 +1022,6 @@
                                     
                                         updateActiveNavItem();
                                     </script> -->
-                                    <script>
-                                        document.querySelectorAll('.nav-links').forEach(function (link) {
-                                        link.addEventListener('click', function (event) {
-                                            event.preventDefault();
-                                            var href = this.getAttribute('href');
-                                            updateUrl(href);
-                                        });
-
-                                        link.addEventListener('touchstart', function (event) {
-                                            event.preventDefault();
-                                            var href = this.getAttribute('href');
-                                            updateUrl(href);
-                                        });
-                                    });
-                                    </script>
                                 </div>
                                 <div class="header-action d-none d-md-block">
                                     <ul class="list-wrap">

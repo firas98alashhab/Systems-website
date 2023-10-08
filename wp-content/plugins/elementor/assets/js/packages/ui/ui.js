@@ -43699,9 +43699,6 @@ const TabsScroller = (0,_styles_styled__WEBPACK_IMPORTED_MODULE_8__["default"])(
   // Hide dimensionless scrollbar on macOS
   scrollbarWidth: 'none',
   // Firefox
-  '&::-webkit-scrollbar': {
-    display: 'none' // Safari + Chrome
-  }
 }, ownerState.scrollableX && {
   overflowX: 'auto',
   overflowY: 'hidden'
@@ -43758,9 +43755,6 @@ const TabsScrollbarSize = (0,_styles_styled__WEBPACK_IMPORTED_MODULE_8__["defaul
   // Hide dimensionless scrollbar on macOS
   scrollbarWidth: 'none',
   // Firefox
-  '&::-webkit-scrollbar': {
-    display: 'none' // Safari + Chrome
-  }
 });
 
 const defaultIndicatorStyle = {};
