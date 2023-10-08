@@ -1085,6 +1085,22 @@
                             </nav>
                         </div>
                         <div class="menu-backdrop"></div>
+                        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                            <script>
+                            $(document).ready(function () {
+                                // Smooth scroll to anchor links
+                                $('a[href^="#"]').on('click', function (event) {
+                                event.preventDefault();
+                                var target = this.hash;
+                                var $target = $(target);
+
+                                // Animate scrolling
+                                $('html, body').animate({
+                                    'scrollTop': $target.offset().top
+                                }, 1000); // Adjust the animation duration as needed
+                                });
+                            });
+                            </script>
                         <!-- End Mobile Menu -->
                     </div>
                 </div>

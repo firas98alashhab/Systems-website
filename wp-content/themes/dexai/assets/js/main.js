@@ -53,20 +53,6 @@ $(document).ready(function () {
 });
 
 
-$(document).ready(function () {
-  // Smooth scroll to anchor links
-  $('a[href^="#"]').on('click', function (event) {
-    event.preventDefault();
-    var target = this.hash;
-    var $target = $(target);
-
-    // Animate scrolling
-    $('html, body').animate({
-      'scrollTop': $target.offset().top
-    }, 1000); // Adjust the animation duration as needed
-  });
-});
-
 
 /*=============================================
 	=           Data Background             =
