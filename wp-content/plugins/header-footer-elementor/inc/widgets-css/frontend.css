@@ -1065,7 +1065,9 @@ div.hfe-nav-menu,
     }
 }
 
-
+.hfe-flyout-content::-webkit-scrollbar {
+    display: none;
+}
 
 .admin-bar .hfe-side {
     margin-top: 32px;

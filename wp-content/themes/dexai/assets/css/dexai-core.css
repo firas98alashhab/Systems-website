@@ -1033,7 +1033,7 @@ label {
 	overflow-x: hidden;
 	background: var(--tg-black-two);
 	padding: 0px 0px;
-	z-index: 5;
+	z-index: 59999999999999;
 	box-shadow: -9px 0 14px 0px rgb(0 0 0 / 6%);
 }
 .mobile-menu-visible .mobile-menu .menu-box {
