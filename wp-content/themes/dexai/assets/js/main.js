@@ -22,12 +22,13 @@ $(window).on('load', function () {
 	=    		Mobile Menu			      =
 =============================================*/
 //SubMenu Dropdown Toggle
-// Ensure the DOM is ready
-$(document).ready(function () {
-  if ($('.menu-area li.menu-item-has-children ul').length) {
-    $('.menu-area .navigation li.menu-item-has-children').append('<div class="dropdown-btn"><span class="fas fa-angle-down"></span></div>');
-  }
+if ($('.menu-area li.menu-item-has-children ul').length) {
+	$('.menu-area .navigation li.menu-item-has-children').append('<div class="dropdown-btn"><span class="fas fa-angle-down"></span></div>');
 
+}
+
+//Mobile Nav Hide Show
+$(document).ready(function () {
   if ($('.mobile-menu').length) {
     var mobileMenuContent = $('.menu-area .main-menu').html();
     $('.mobile-menu .menu-box .menu-outer').append(mobileMenuContent);
@@ -49,6 +50,21 @@ $(document).ready(function () {
       $('body').removeClass('mobile-menu-visible');
     });
   }
+});
+
+
+$(document).ready(function () {
+  // Smooth scroll to anchor links
+  $('a[href^="#"]').on('click', function (event) {
+    event.preventDefault();
+    var target = this.hash;
+    var $target = $(target);
+
+    // Animate scrolling
+    $('html, body').animate({
+      'scrollTop': $target.offset().top
+    }, 1000); // Adjust the animation duration as needed
+  });
 });
 
 
