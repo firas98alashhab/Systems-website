@@ -112,6 +112,7 @@ body {
 	color: var(--tg-body-font-color);
 	font-style: normal;
 }
+
 main.main-content {
 	position: relative;
 	z-index: 1;
