@@ -24,18 +24,19 @@ $(window).on('load', function () {
 //SubMenu Dropdown Toggle
 if ($('.menu-area li.menu-item-has-children ul').length) {
 	$('.menu-area .navigation li.menu-item-has-children').append('<div class="dropdown-btn"><span class="fas fa-angle-down"></span></div>');
+
 }
 
 // Mobile Nav Hide Show
 if ($('.mobile-menu').length) {
-	// Clone the main navigation menu
-	var mobileMenuContent = $('.menu-area .navigation').clone();
-	$('.mobile-menu .menu-box').append(mobileMenuContent);
+
+	var mobileMenuContent = $('.menu-area .main-menu').html();
+	$('.mobile-menu .menu-box .menu-outer').append(mobileMenuContent);
 
 	// Dropdown Button
 	$('.mobile-menu li.menu-item-has-children .dropdown-btn').on('click', function () {
 			$(this).toggleClass('open');
-			$(this).siblings('ul').slideToggle(300);
+			$(this).prev('ul, .tg-mega-menu-wrap').slideToggle(300);
 	});
 
 	// Menu Toggle Btn
@@ -45,6 +46,22 @@ if ($('.mobile-menu').length) {
 
 	// Menu Toggle Btn
 	$('.menu-backdrop, .mobile-menu .close-btn').on('click', function () {
+			$('body').removeClass('mobile-menu-visible');
+	});
+
+	// Scroll to Section when Mobile Menu Item is Clicked
+	$('.mobile-menu .menu-outer a').on('click', function (e) {
+			e.preventDefault(); // Prevent the default link behavior
+
+			var target = $(this).attr('href'); // Get the href attribute of the clicked link
+			var offset = $(target).offset().top; // Get the top offset of the target section
+
+			// Scroll to the target section with a smooth animation
+			$('html, body').animate({
+					scrollTop: offset
+			}, 800); // You can adjust the animation speed (800 milliseconds) as needed
+
+			// Close the mobile menu
 			$('body').removeClass('mobile-menu-visible');
 	});
 }
