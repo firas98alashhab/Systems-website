@@ -104,9 +104,6 @@
     --youtube: #c4302b;
     --skype: #00aff0;
 }
-html{
-	overflow-x: hidden;
-}
 body {
 	font-family: var(--tg-body-font-family);
 	font-weight: var(--tg-body-font-weight);
