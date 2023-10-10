@@ -104,6 +104,11 @@
     --youtube: #c4302b;
     --skype: #00aff0;
 }
+
+html {
+	overflow-x: hidden;
+}
+
 body {
 	font-family: var(--tg-body-font-family);
 	font-weight: var(--tg-body-font-weight);
@@ -111,7 +116,6 @@ body {
 	line-height: var(--tg-body-line-height);
 	color: var(--tg-body-font-color);
 	font-style: normal;
-	overflow-x: hidden;
 }
 main.main-content {
 	position: relative;
@@ -972,7 +976,7 @@ label {
 	padding-right: 30px;
 	max-width: 100%;
 	height: 100%;
-	z-index: 9999;
+	z-index: 9999 !important;
 	border-radius: 0px;
 	transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 	-moz-transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -1033,7 +1037,7 @@ label {
 	overflow-x: hidden;
 	background: var(--tg-black-two);
 	padding: 0px 0px;
-	z-index: 500;
+	z-index: 5000 !important;
 	box-shadow: -9px 0 14px 0px rgb(0 0 0 / 6%);
 }
 .mobile-menu-visible .mobile-menu .menu-box {
