@@ -51,12 +51,13 @@ if ($('.mobile-menu').length) {
 	// Scroll to Section when Mobile Menu Item is Clicked
 	$('.mobile-menu .menu-outer a').on('click', function (e) {
 			e.preventDefault(); // Prevent the default link behavior
-			var target = $(this).attr('href'); // Get the href attribute of the clicked link
-			var offset = $(target).offset().top; // Get the top offset of the target section
+			var target = $(this).attr('href');
+			var offset = $(target).offset().top;
+			
 			// Scroll to the target section with a smooth animation
 			$('html, body').animate({
 					scrollTop: offset
-			}, 800); // You can adjust the animation speed (800 milliseconds) as needed
+			}, 1); // You can adjust the animation speed (800 milliseconds) as needed
 			// Close the mobile menu
 			$('body').removeClass('mobile-menu-visible');
 	});
