@@ -30,10 +30,11 @@ if ($('.menu-area li.menu-item-has-children ul').length) {
 // Mobile Nav Hide Show
 if ($('.mobile-menu').length) {
 	var mobileMenuContent = $('.menu-area .main-menu').html();
-	$('.mobile-menu .menu-box .menu-outer').append(mobileMenuContent);
+	var mobileMenu = $('.mobile-menu .menu-box');
+	mobileMenu.find('.menu-outer').append(mobileMenuContent);
 
 	// Dropdown Button
-	$('.mobile-menu li.menu-item-has-children .dropdown-btn').on('click', function () {
+	mobileMenu.find('li.menu-item-has-children .dropdown-btn').on('click', function () {
 			$(this).toggleClass('open');
 			$(this).prev('ul, .tg-mega-menu-wrap').slideToggle(300);
 	});
@@ -41,38 +42,44 @@ if ($('.mobile-menu').length) {
 	// Menu Toggle Btn
 	$('.mobile-nav-toggler').on('click', function () {
 			$('body').addClass('mobile-menu-visible');
+			mobileMenu.css('z-index', '9999'); // Set z-index to 9999 when menu is opened
 	});
 
 	// Menu Toggle Btn
-	$('.menu-backdrop, .mobile-menu .close-btn').on('click', function () {
+	mobileMenu.find('.menu-backdrop, .mobile-menu .close-btn').on('click', function () {
 			$('body').removeClass('mobile-menu-visible');
 	});
 
 	// Scroll to Section when Mobile Menu Item is Clicked
-	$('.mobile-menu .menu-outer a').on('click', function (e) {
+	mobileMenu.find('.menu-outer a').on('click', function (e) {
 			e.preventDefault(); // Prevent the default link behavior
-			var target = $(this).attr('href');
-			var offset = $(target).offset().top;
-			
+			var target = $(this).attr('href'); // Get the href attribute of the clicked link
+			var offset = $(target).offset().top; // Get the top offset of the target section
+			// Scroll to the target section with a smooth animation
 			$('html, body').animate({
 					scrollTop: offset
-			}, 1000);
+			}, 800); // You can adjust the animation speed (800 milliseconds) as needed
+			// Close the mobile menu
 			$('body').removeClass('mobile-menu-visible');
 	});
 
 	// Logo Click Event (Toggle Menu and Redirect)
-	var logoClicked = false;
-	$('.mobile-menu .nav-logo a').on('click', function (e) {
-			e.preventDefault();
-			var target = $(this).attr('href');
+	var logoClicked = false; // Variable to track if the logo was clicked
+	mobileMenu.find('.nav-logo a').on('click', function (e) {
+			e.preventDefault(); // Prevent the default link behavior
+			var target = $(this).attr('href'); // Get the href attribute of the clicked link
+			// Toggle the mobile menu
 			$('body').toggleClass('mobile-menu-visible');
+			mobileMenu.css('z-index', '9999'); // Set z-index to 9999 when menu is opened
 			if (!logoClicked) {
-					logoClicked = true;
+					logoClicked = true; // Set the flag to true after the first click
 			} else {
+					// Redirect to the href="#"
 					window.location.href = target;
 			}
 	});
 }
+
 
 
 
