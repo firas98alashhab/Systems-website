@@ -29,7 +29,6 @@ if ($('.menu-area li.menu-item-has-children ul').length) {
 
 // Mobile Nav Hide Show
 if ($('.mobile-menu').length) {
-
 	var mobileMenuContent = $('.menu-area .main-menu').html();
 	$('.mobile-menu .menu-box .menu-outer').append(mobileMenuContent);
 
@@ -52,19 +51,32 @@ if ($('.mobile-menu').length) {
 	// Scroll to Section when Mobile Menu Item is Clicked
 	$('.mobile-menu .menu-outer a').on('click', function (e) {
 			e.preventDefault(); // Prevent the default link behavior
-
 			var target = $(this).attr('href'); // Get the href attribute of the clicked link
 			var offset = $(target).offset().top; // Get the top offset of the target section
-
 			// Scroll to the target section with a smooth animation
 			$('html, body').animate({
 					scrollTop: offset
 			}, 800); // You can adjust the animation speed (800 milliseconds) as needed
-
 			// Close the mobile menu
 			$('body').removeClass('mobile-menu-visible');
 	});
+
+	// Logo Click Event (Toggle Menu and Redirect)
+	var logoClicked = false; // Variable to track if the logo was clicked
+	$('.mobile-menu .nav-logo a').on('click', function (e) {
+			e.preventDefault(); // Prevent the default link behavior
+			var target = $(this).attr('href'); // Get the href attribute of the clicked link
+			// Toggle the mobile menu
+			$('body').toggleClass('mobile-menu-visible');
+			if (!logoClicked) {
+					logoClicked = true; // Set the flag to true after the first click
+			} else {
+					// Redirect to the href="#"
+					window.location.href = target;
+			}
+	});
 }
+
 
 
 
