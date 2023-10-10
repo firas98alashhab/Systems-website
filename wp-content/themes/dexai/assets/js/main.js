@@ -56,7 +56,7 @@ if ($('.mobile-menu').length) {
 			
 			$('html, body').animate({
 					scrollTop: offset
-			}, 1);
+			}, 1000);
 			$('body').removeClass('mobile-menu-visible');
 	});
 
