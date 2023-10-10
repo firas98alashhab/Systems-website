@@ -54,25 +54,21 @@ if ($('.mobile-menu').length) {
 			var target = $(this).attr('href');
 			var offset = $(target).offset().top;
 			
-			// Scroll to the target section with a smooth animation
 			$('html, body').animate({
 					scrollTop: offset
-			}, 1); // You can adjust the animation speed (800 milliseconds) as needed
-			// Close the mobile menu
+			}, 1);
 			$('body').removeClass('mobile-menu-visible');
 	});
 
 	// Logo Click Event (Toggle Menu and Redirect)
-	var logoClicked = false; // Variable to track if the logo was clicked
+	var logoClicked = false;
 	$('.mobile-menu .nav-logo a').on('click', function (e) {
-			e.preventDefault(); // Prevent the default link behavior
-			var target = $(this).attr('href'); // Get the href attribute of the clicked link
-			// Toggle the mobile menu
+			e.preventDefault();
+			var target = $(this).attr('href');
 			$('body').toggleClass('mobile-menu-visible');
 			if (!logoClicked) {
-					logoClicked = true; // Set the flag to true after the first click
+					logoClicked = true;
 			} else {
-					// Redirect to the href="#"
 					window.location.href = target;
 			}
 	});
